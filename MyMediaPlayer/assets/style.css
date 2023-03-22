@@ -1,0 +1,110 @@
+@font-face{
+    font-family: 'Font Awesome 5 free';
+    src: url("C:/Users/axelg/lecteur multimédia/fontawesome-free-5.15.2-web/css.all");
+}
+html {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    padding:0;
+}
+
+.container {
+    display: flex;
+    background-image: url(/img/mustafar.webp);
+    filter: brightness(80%);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: -webkit-linear-gradient(rgb(121, 45, 45), rgb(0, 0, 0));
+}
+
+.video {
+    width: 100%;
+}
+
+.allVid {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.7);
+
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.2s;
+}
+
+.allVid:hover .controls {
+    transform: translateY(0);
+}
+
+
+.buttons {
+    padding: 10px;
+}
+
+
+.buttons button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mute {
+    position: relative;
+    top: -5px;
+}
+
+.buttons #play-pause::before {
+    
+    content: '\f144';
+    font-family: 'Font Awesome 5 free';
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-size: 28px;
+    color: rgb(189, 189, 189);
+}
+
+.buttons #play-pause.play::before {
+    content: '\f144';
+}
+
+.buttons #play-pause.pause::before {
+    content: '\f28b';
+}
+.buttons #stop{
+    width: 20px;
+    height: 20px;
+}
+
+.orange-bar {
+    height: 10px;
+    width: 100%;
+    background: #000;
+    cursor: pointer;
+}
+
+.orange-juice {
+    height: 10px;
+    background-color: rgb(183, 49, 0);
+}
